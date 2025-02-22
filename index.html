@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify-Like Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">🎵 My Music</div>
+            <ul class="nav">
+                <li>Home</li>
+                <li class="active">Playlist</li>
+                <li>Favorites</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <h1>Your Playlist</h1>
+            <ul id="playlist" class="playlist"></ul>
+        </div>
+
+        <!-- Now Playing Bar -->
+        <div class="now-playing">
+            <div class="song-info">
+                <span id="song-title">Select a song</span>
+            </div>
+            <div class="player-controls">
+                <div class="controls">
+                    <button id="prev">⏮</button>
+                    <button id="play-pause">▶️</button>
+                    <button id="next">⏭</button>
+                </div>
+                <div class="progress-container">
+                    <span id="current-time">0:00</span>
+                    <input type="range" id="progress-bar" value="0" min="0" max="100">
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+            <audio id="audio-player"></audio>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
